@@ -32,8 +32,6 @@ describe("Thermostat", function() {
     });
 
     it("if temperature will never go above maximum and error with be thrown", function() {
-
-
       expect(function(){thermostat.upTemp(100)}).toThrow("Max Temperature Reached");
       expect(thermostat.currentTemp()).toEqual(25);
     })
@@ -45,27 +43,36 @@ describe("Thermostat", function() {
   describe("#downTemp", function() {
 
     it("turns temperature down by 2 as default", function() {
-
       thermostat.downTemp()
       expect(thermostat.currentTemp()).toEqual(18);
     });
 
     it("can override default temp change", function() {
-
       thermostat.downTemp(4)
       expect(thermostat.currentTemp()).toEqual(16);
     });
 
     it("if temperature will never go below minimum and error with be thrown", function() {
-
-
       expect(function(){thermostat.downTemp(100)}).toThrow("Max Temperature Reached");
       expect(thermostat.currentTemp()).toEqual(10);
     })
 
-
-
   });
+
+  describe("#reset", function() {
+    it("temperature will be reset to 20", function() {
+      thermostat.downTemp(6)
+      thermostat.reset()
+      expect(thermostat.currentTemp()).toEqual(20)
+
+
+    })
+
+
+
+
+
+  })
 
 
 
