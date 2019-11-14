@@ -4,6 +4,7 @@ function Thermostat() {
   this._temp = 20
   this._maxTemp = 25
   this._minTemp = 10
+  this._powerSavingMode = true
 }
 
 Thermostat.prototype.currentTemp = function() {
@@ -36,10 +37,12 @@ Thermostat.prototype.reset = function() {
 
 Thermostat.prototype.powerSaveModeOff = function() {
   this._maxTemp = 32
+  this._powerSavingMode = false
 }
 
 Thermostat.prototype.powerSaveModeOn = function() {
   this._maxTemp = 25
+  this._powerSavingMode = true
 }
 
 Thermostat.prototype.usage = function() {
