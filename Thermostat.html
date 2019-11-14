@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <!-- include source files here... -->
-<script src="src/Thermostat.js"></script>
+
 
 <html>
   <head>
+
     <title>Thermostat</title>
   </head>
     <body>
-    <h1>Thermostat</h1>
-    <p>Current Temp: 20</p>
-    <p>Power Save Mode: On</p>
-    <p>Usage: High Usage</p>
+    <h1 id = 'temperature' ></h1>
 
-    <form>
-      <input type="submit" value="Increase Temperature by 2">
-      <input type="text" name="upTemp" placeholder="Specify a tempurature if you dare!! muuuuhaarrrharrrharrrharrr">
-    </form>
+    <p id= "powersaving"></p>
+    <p id = 'usage'>Power Saving On</p>
 
-    <form>
-      <input type="submit" value="Decrease Temperature by 2">
-      <input type="text" name="downTemp" placeholder="Specify a tempurature if you dare!! muuuuhaarrrharrrharrrharrr"">
-    </form>
+
+      <button id = "tempurature-up">+</button>
+
+      <button id = "tempurature-down">-</button>
+
+
 
       <button id = "powersaving-on">Power Saving On</button>
 
@@ -28,5 +26,12 @@
 
       <button id = "reset-temp">Reset Temperature</button>
 
+
+      <script src="jQuery.js"></script>
+      <script src="src/Thermostat.js"></script>
+      <script src="interface.js"></script>
+      <script src="jQuery.js"></script>
+
   </body>
+
 </html>
